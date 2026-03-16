@@ -1,0 +1,148 @@
+﻿/* Global Page Style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, Arial;
+    background: linear-gradient(135deg, #00FFFF,#00008B);
+}
+
+/* Center Container */
+.container{
+    width: 420px;
+    margin: auto;
+    margin-top: 80px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Large Container (For tables pages)*/
+
+.container-large{
+    width: 900px;
+    margin: auto;
+    margin-top: 60px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Headings */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #F8F8FF;
+}
+
+/*Text Input*/
+input[type=text], input[type=password], input[type=number]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/*Button Style*/
+.btn{
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #0056b3;
+    transform: scale(1.03);
+}
+
+/* Success Button */
+.btn-success{
+    background: #28a745;
+}
+
+.btn-success:hover{
+    background: #218838;
+}
+
+/*Danger Button*/
+.btn-danger{
+    background: #dc3545;
+}
+
+.btn-danger:hover{
+    background: #c82333;
+}
+
+/*Grid View*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    background: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+td{
+    background: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+tr:hover{
+    background: #f5f5f5;
+}
+
+/*Account Balance*/
+.balance{
+    font-size: 26px;
+    color: green;
+    font-weight: bold;
+}
+
+/*Dashboard button group*/
+.dashboard-btn{
+    width: 100%;
+    padding: 4px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #17a2b8;
+    color: white;
+    font-size: 16px;
+}
+
+.dashboard-btn:hover{
+    background: #117a8b;
+}
+
+/*Navbar*/
+.navbar{
+    width: 100%;
+    background: #0d1b2a;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*Footer*/
+.footer{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+

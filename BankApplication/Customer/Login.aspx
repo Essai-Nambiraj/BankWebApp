@@ -9,8 +9,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Panel ID="pnlLogin" runat="server" DefaultButton="btnLogin">
+        <div class="dashboard-box">
+            <div class="dashboard-box-login">
+                <asp:Panel ID="pnlLogin" runat="server" DefaultButton="btnLogin">
+                <h2>Customer Login</h2>
                 <input type="text" id="txtUser" runat="server" placeholder="UserName"/>
                 <asp:RequiredFieldValidator ID="user" runat="server" ErrorMessage="Enter Username" ControlToValidate="txtUser" ForeColor="Red"> * </asp:RequiredFieldValidator>
                 <br />
@@ -20,9 +22,11 @@
                 <asp:RequiredFieldValidator ID="pass" runat="server" ControlToValidate="txtPass" ErrorMessage="Please enter a password" ForeColor="Red" > * </asp:RequiredFieldValidator>
                  <asp:Label ID="lblPassError" runat="server" ForeColor="Red" ></asp:Label>
                 <br />
-                <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
-                <asp:Button ID="btnNewUser" runat="server" Text="Create Account" OnClick="btnNewUser_Click" CausesValidation="false" />
-            </asp:Panel>
+                <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  CssClass="btn" />
+                <asp:Button ID="btnNewUser" runat="server" Text="Create Account" OnClick="btnNewUser_Click" CausesValidation="false"  CssClass="btn" />
+                </asp:Panel>
+            </div>
+            
             
 
 

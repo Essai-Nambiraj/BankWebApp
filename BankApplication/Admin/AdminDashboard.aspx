@@ -6,12 +6,6 @@
 <head runat="server">
     <title></title>
     <link href="../Styles/BankApp.css" rel="stylesheet"/>
-    <style>
-        #btnLogout{
-             Width: 100px;
-             margin-left:90%;
-        }
-    </style>
 
     <script>
         function confirmLogout() {
@@ -22,19 +16,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
         <div class="box">
+
             <h2>Admin DashBoard</h2>
             <h3>Welcome,
                 <asp:Label ID="lblAdminName" runat="server"></asp:Label>
 
             </h3>
-            <asp:Button ID="btnLogout" runat="server" Text="Logout" PostBackUrl="~/Admin/AdminLogin.aspx" OnClick="btnLogout_Click" OnClientClick="return confirmLogout()" />
+            
 
             <br />
             <asp:Button runat="server" Text="Approve Accounts" CssClass="btn" PostBackUrl="~/Admin/ApproveAccounts.aspx" />
             <asp:Button runat="server" Text="Manage Customers" CssClass="btn" PostBackUrl="~/Admin/ManageCustomers.aspx" />
             <asp:Button runat="server" Text="View Transactions" CssClass="btn" PostBackUrl="~/Admin/ViewTransactions.aspx" />
             <asp:Button runat="server" Text="Reports" CssClass="btn" PostBackUrl="~/Admin/Reports.aspx" />
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" PostBackUrl="~/Admin/AdminLogin.aspx"  CssClass="btn" OnClick="btnLogout_Click" OnClientClick="return confirmLogout()" />
         </div>
     </form>
 </body>

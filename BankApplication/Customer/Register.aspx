@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../Styles/BankApp.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="~/Styles/BankApp.css" runat="server" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="dashboard-box">
             <h2>Create Bank Account</h2>
             <asp:TextBox ID="txtName" runat="server" placeholder="Enter Full Name" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator0" runat="server" ErrorMessage="Enter Name" ControlToValidate="txtName" ForeColor="Red"> </asp:RequiredFieldValidator>
@@ -23,6 +23,7 @@
             <asp:TextBox ID="txtEmail" runat="server" placeholder="Email address"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Email" ControlToValidate="txtEmail" ForeColor="Red"> </asp:RequiredFieldValidator>
             <br />
+            <asp:Label ID="lblDropDown" runat="server" Text="Account Type: "></asp:Label>
             <asp:DropDownList ID="ddlAccountType" runat="server" >
                 <asp:ListItem Text="Select Account Type" Value=""></asp:ListItem>
                 <asp:ListItem Text="Savings Account" Value="Savings"></asp:ListItem>
@@ -37,13 +38,13 @@
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"  placeholder="Enter Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Enter Password" ControlToValidate="txtPassword" ForeColor="Red"> </asp:RequiredFieldValidator>
             <br />
-            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"></asp:Button>
+            <asp:Button ID="btnRegister" runat="server" CssClass="btn" Text="Register" OnClick="btnRegister_Click"></asp:Button>
             <br />            
-        </div>
-        <asp:Label ID="lblAccount" runat="server" Text="Already have an acccount?" ></asp:Label>
-        <asp:LinkButton ID="btnCustLogin" runat="server" Text="User Login"  OnClick="btnCustLogin_Click" CausesValidation="false" ></asp:LinkButton>
-        <br />
-        <asp:Button ID="btnAdmin" runat="server" Text="Admin Login" OnClick="btnAdmin_Click" CausesValidation="false"></asp:Button>
+            <asp:Label ID="lblAccount" runat="server" Text="Already have an acccount?" ></asp:Label>
+            <asp:LinkButton ID="btnCustLogin" runat="server" Text="User Login"  OnClick="btnCustLogin_Click" CausesValidation="false" ></asp:LinkButton>
+            <br />
+            <asp:Button ID="btnAdmin" runat="server" Text="Admin Login" CssClass="btn" OnClick="btnAdmin_Click" CausesValidation="false"></asp:Button>
+        </div> 
     </form>
 </body>
 </html>

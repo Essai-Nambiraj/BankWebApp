@@ -9,7 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="box">
+        <div class="box-table">
+             <asp:Button ID="btnBack" runat="server" Text="Back to Dashboard" CssClass="btn" OnClick="btnBack_Click" />
             <h2>Transaction History</h2>
             <hr />
             <asp:GridView ID="gvTransactions" runat="server" CssClass="grid" AutoGenerateColumns="false" Width="100%" BorderStyle="Solid" BorderWidth="1px">
@@ -24,7 +25,7 @@
             </asp:GridView>
             <br />
 
-            <asp:Button ID="btnBack" runat="server" Text="Back to Dashboard" CssClass="btn" OnClick="btnBack_Click" />
+           
             
         </div>
     </form>

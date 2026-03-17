@@ -6,12 +6,6 @@
 <head runat="server">
     <title>Money Deposit</title>
     <link href="../Styles/BankApp.css" rel="stylesheet"/>
-    <style>
-        button:hover{
-            background: #218838;
-        }
-    </style>
-
     <script>
         function validateDeposit() {
             var amount = document.getElementById("txtAmount").value;
@@ -26,11 +20,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="boc">
+        <div class="box">
             <h2>Deposit Money</h2>
             <hr />
             <h3>Account Number</h3>
-            <asp:Label ID="lblAccount" runat="server" ></asp:Label>
+            <asp:Label ID="lblAccount" runat="server" CssClass="labels" ></asp:Label>
             <br /><br />
             <input type="number" id="txtAmount" runat="server" placeholder="Enter Amount to Deposit"/>
             <asp:RequiredFieldValidator ID="pass" runat="server" ControlToValidate="txtAmount" ErrorMessage="Please enter a Deposit Amount" ForeColor="Red" />

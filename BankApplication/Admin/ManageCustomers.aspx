@@ -14,8 +14,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="box">
-            <asp:Button ID="txtBack" runat="server" Text="Back" OnClick="txtBack_Click" />
+        <div class="box-table">
+            <asp:Button ID="txtBack" runat="server" CssClass="btn" Text="Back" OnClick="txtBack_Click" />
 
             <h2>Manage Customers</h2>
             <!-- Search Section -->

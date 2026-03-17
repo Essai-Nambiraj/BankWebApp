@@ -10,9 +10,10 @@
 <body>
     <form id="form1" runat="server">
         <div class="box">
+            <asp:Button ID="txtBack" runat="server" Text="Back" OnClick="txtBack_Click" CssClass="btn" CausesValidation="false"/>
+
             <h2>Admin Login</h2>
             <asp:Panel ID="pnlLogin" runat="server" DefaultButton="btnLogin">
-                <asp:Button ID="txtBack" runat="server" Text="Back" OnClick="txtBack_Click" CausesValidation="false"/>
 
                 <input type="text" id="txtUser" runat="server" placeholder="Username" />
                 <asp:RequiredFieldValidator ID="user" runat="server" ErrorMessage="Enter Username" ControlToValidate="txtUser" ForeColor="Red">  </asp:RequiredFieldValidator>

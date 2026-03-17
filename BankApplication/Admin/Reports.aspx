@@ -9,8 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="box">
-            <asp:Button ID="txtBack" runat="server" Text="Back" OnClick="txtBack_Click" />
+        <div class="box-table">
+            <asp:Button ID="txtBack" CssClass="btn" runat="server" Text="Back" OnClick="txtBack_Click" />
             <h2>Bank Reports</h2>
 
             <table class="table">

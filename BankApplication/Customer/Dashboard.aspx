@@ -8,20 +8,26 @@
     <style>
         
     </style>
-    <link href="../Styles/BankApp.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../Styles/BankApp.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn" OnClick="btnLogout_Click" />
+       
         <div class="dashboard-box">
-            <h2>Bank Dashboard</h2>
-            <hr />
-            <h3>Account Number</h3>
-            <asp:Label ID="lblAccount" runat="server" ></asp:Label>
-            <h3>Account Type</h3>
-            <asp:Label ID="lblAccountType" runat="server"></asp:Label>
-            <h3>Current Balance</h3>
-            <asp:Label ID="lblBalance" runat="server"></asp:Label>
+             <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn" OnClick="btnLogout_Click" />
+            <div class="labels">
+                 <h2>Bank Dashboard</h2>
+                 <hr />
+                 <h3>Account Number</h3>
+                 <asp:Label ID="lblAccount" runat="server" CssClass="labels" ></asp:Label>
+                 <h3>Account Type</h3>
+                 <asp:Label ID="lblAccountType" runat="server" CssClass="labels"></asp:Label>
+             </div>
+             <div class="balance">
+                <h3>Current Balance</h3>
+                <asp:Label ID="lblBalance" runat="server"></asp:Label>
+            </div>
+            
 
             <br />
             <asp:Button ID="btnDeposit" runat="server" Text="Deposit Money" CssClass="btn" OnClick="btnDeposit_Click"/>

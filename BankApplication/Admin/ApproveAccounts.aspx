@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="box">
-            <asp:Button ID="txtBack" runat="server" Text="Back" OnClick="txtBack_Click" />
+            <asp:Button ID="txtBack" runat="server" Text="Back"  CssClass="btn"  OnClick="txtBack_Click" />
             <asp:GridView ID="gvPending" runat="server" AutoGenerateColumns="false" OnRowCommand="gvPending_RowCommand" >
                 <Columns>
                     <asp:BoundField DataField="CustomerID" HeaderText="ID" />

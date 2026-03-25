@@ -102,6 +102,9 @@
     <Content Include="About.aspx" />
     <Content Include="Admin\AdminDashboard.aspx" />
     <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\ApproveLoan.aspx" />
+    <Content Include="Customer\LoanDetails.aspx" />
+    <Content Include="Customer\LoanPayment.aspx" />
     <Content Include="Admin\ManageCustomers.aspx" />
     <Content Include="Admin\ApproveAccounts.aspx" />
     <Content Include="Admin\Reports.aspx" />
@@ -125,8 +128,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Customer\Dashboard.aspx" />
+    <Content Include="Customer\InterestRate.aspx" />
+    <Content Include="Customer\LoanModule.aspx" />
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\Register.aspx" />
+    <Content Include="Customer\Services.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -211,6 +217,27 @@
     <Compile Include="Admin\AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ApproveLoan.aspx.cs">
+      <DependentUpon>ApproveLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ApproveLoan.aspx.designer.cs">
+      <DependentUpon>ApproveLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\LoanDetails.aspx.cs">
+      <DependentUpon>LoanDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\LoanDetails.aspx.designer.cs">
+      <DependentUpon>LoanDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\LoanPayment.aspx.cs">
+      <DependentUpon>LoanPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\LoanPayment.aspx.designer.cs">
+      <DependentUpon>LoanPayment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManageCustomers.aspx.cs">
       <DependentUpon>ManageCustomers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,6 +290,20 @@
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\DBConnection.cs" />
+    <Compile Include="Customer\InterestRate.aspx.cs">
+      <DependentUpon>InterestRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\InterestRate.aspx.designer.cs">
+      <DependentUpon>InterestRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\LoanModule.aspx.cs">
+      <DependentUpon>LoanModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\LoanModule.aspx.designer.cs">
+      <DependentUpon>LoanModule.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,6 +317,13 @@
     </Compile>
     <Compile Include="Customer\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

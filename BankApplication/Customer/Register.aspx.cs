@@ -19,7 +19,16 @@ namespace BankApplication.Customer
 
             //string accountType = ddlAccountType.SelectedValue;
 
-            con.Open();
+            decimal intRate = 0;
+            if (ddlAccountType.SelectedValue == "Savings")
+                intRate = 4;
+            else if (ddlAccountType.SelectedValue == "Current")
+                intRate = 0;
+            else if (ddlAccountType.SelectedValue == "FD")
+                intRate = 7;
+
+
+                con.Open();
             string q = "Select * from Customers where Username=@usern";
 
             SqlCommand cmd1 = new SqlCommand(q, con);
@@ -37,8 +46,8 @@ namespace BankApplication.Customer
                 sdr.Close();
                 string accNo = "ACC" + new Random().Next(10000, 99999);
 
-                string query = "Insert into Customers(Name, Email, Phone, Address, Username, Password, AccountNumber, AccountType, Balance, Status) " +
-                    "Values(@Name, @Email, @Phone, @Address, @Username, @Password, @AccNo, @AccType,0, 'Pending')";
+                string query = "Insert into Customers(Name, Email, Phone, Address, Username, Password, AccountNumber, AccountType, Balance, Status, InterestRate) " +
+                    "Values(@Name, @Email, @Phone, @Address, @Username, @Password, @AccNo, @AccType,0, 'Pending', @Rate)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -50,6 +59,7 @@ namespace BankApplication.Customer
                 cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
                 cmd.Parameters.AddWithValue("@AccNo", accNo);
                 cmd.Parameters.AddWithValue("@AccType", ddlAccountType.SelectedItem.Text);
+                cmd.Parameters.AddWithValue("@Rate", intRate);
 
 
                 cmd.ExecuteNonQuery();

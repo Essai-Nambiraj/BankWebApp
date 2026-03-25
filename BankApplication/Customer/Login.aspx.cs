@@ -70,5 +70,55 @@ namespace BankApplication.Customer
         {
             Response.Redirect("Register.aspx");
         }
+
+        protected void btnUpdatePwd_Click(object sender, EventArgs e)
+        {
+            string user = txtUser.Value;
+            string current = txtCurrent.Text;
+            string newPass = txtNew.Text;
+            string confirm = txtConfirm.Text;
+
+            if (newPass != confirm)
+            {
+                Response.Write("<script>alert('Password do not match.')</script>");
+                return;
+            }
+
+
+            DBConnection db = new DBConnection();
+            SqlConnection con = db.GetConnection();
+
+            con.Open();
+
+            //check current pwd
+            string q = "Select Count(*) from Customers where Password=@pwd";
+            SqlCommand check = new SqlCommand(q, con);
+
+            check.Parameters.AddWithValue("@pwd", current);
+
+            int count = (int)check.ExecuteScalar();
+
+            if(count == 0)
+            {
+                Response.Write("<script>alert('Current Password incorrect')</script>");
+                con.Close();
+                return;
+            }
+
+            //update pwd
+            string query = "Update Customers Set Password=@newPass where Password=@pwd AND Username=@user";
+            SqlCommand update = new SqlCommand(query, con);
+
+            update.Parameters.AddWithValue("@user", user);
+            update.Parameters.AddWithValue("@pwd", current );
+            update.Parameters.AddWithValue("@newPass", newPass);
+
+            update.ExecuteNonQuery();
+
+            con.Close();
+
+            Response.Write("<script>alert('Password Updated Successfully')</script>");
+        }
     }
 }
+

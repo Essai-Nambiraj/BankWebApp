@@ -18,6 +18,9 @@
             <div class="labels">
                  <h2>Bank Dashboard</h2>
                  <hr />
+                <h3>Welcome,<br />
+                    <asp:Label ID="lblCustomerName" CausesValidation="false" runat="server"></asp:Label>
+                </h3>
                  <h3>Account Number</h3>
                  <asp:Label ID="lblAccount" runat="server" CssClass="labels" ></asp:Label>
                  <h3>Account Type</h3>
@@ -34,6 +37,7 @@
             <asp:Button ID="btnWithdraw" runat="server" Text="Withdraw Money" CssClass="btn"  OnClick="btnWithdraw_Click"/>
             <asp:Button ID="btnTransfer" runat="server" Text="Transfer Money" CssClass="btn"  OnClick="btnTransfer_Click"/>
             <asp:Button ID="btnHistory" runat="server" Text="Transaction History" CssClass="btn" OnClick="btnHistory_Click"/>
+            <asp:Button ID="btnServices" runat="server" Text="Services" CssClass="btn" OnClick="btnServices_Click"/>
         </div>
     </form>
 </body>

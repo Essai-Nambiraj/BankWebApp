@@ -30,6 +30,7 @@ namespace BankApplication.Customer
 
             if (!IsPostBack)
             {
+               // lblCustomerName.Text = Session["AccountNumber"].ToString();
                 LoadAccountDetails();
             }
         }
@@ -41,7 +42,7 @@ namespace BankApplication.Customer
 
             string accNo = Session["AccountNumber"].ToString();
            
-            string query = "Select AccountNumber, AccountType, Balance from Customers where AccountNumber=@acc";
+            string query = "Select Name, AccountNumber, AccountType, Balance from Customers where AccountNumber=@acc";
             SqlCommand cmd = new SqlCommand(query, con);
 
             cmd.Parameters.AddWithValue("@acc", Session["AccountNumber"].ToString());
@@ -52,6 +53,7 @@ namespace BankApplication.Customer
 
             if (dr.Read())
             {
+                lblCustomerName.Text = dr["Name"].ToString().ToUpper();
                 lblAccount.Text = dr["AccountNumber"].ToString();
                 lblAccountType.Text = dr["AccountType"].ToString();
                 lblBalance.Text = dr["Balance"].ToString();
@@ -87,6 +89,11 @@ namespace BankApplication.Customer
             Session.Abandon();
            
             Response.Redirect("../Customer/Login.aspx");
+        }
+
+        protected void btnServices_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Services.aspx");
         }
     }
 }

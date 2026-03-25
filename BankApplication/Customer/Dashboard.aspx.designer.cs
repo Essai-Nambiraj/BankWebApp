@@ -33,6 +33,15 @@ namespace BankApplication.Customer
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
+        /// lblCustomerName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCustomerName;
+
+        /// <summary>
         /// lblAccount control.
         /// </summary>
         /// <remarks>
@@ -94,5 +103,14 @@ namespace BankApplication.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnHistory;
+
+        /// <summary>
+        /// btnServices control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnServices;
     }
 }

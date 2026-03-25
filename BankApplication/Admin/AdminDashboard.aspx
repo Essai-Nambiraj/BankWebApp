@@ -10,7 +10,6 @@
     <script>
         function confirmLogout() {
             confirm("Are you want to sure to Logout?");
-            
     }
     </script>
 </head>
@@ -31,6 +30,7 @@
             <asp:Button runat="server" Text="Manage Customers" CssClass="btn" PostBackUrl="~/Admin/ManageCustomers.aspx" />
             <asp:Button runat="server" Text="View Transactions" CssClass="btn" PostBackUrl="~/Admin/ViewTransactions.aspx" />
             <asp:Button runat="server" Text="Reports" CssClass="btn" PostBackUrl="~/Admin/Reports.aspx" />
+            <asp:Button runat="server" Text="View Loans" CssClass="btn" PostBackUrl="~/Admin/ApproveLoan.aspx" />
             <asp:Button ID="btnLogout" runat="server" Text="Logout" PostBackUrl="~/Admin/AdminLogin.aspx"  CssClass="btn" OnClick="btnLogout_Click" OnClientClick="return confirmLogout()" />
         </div>
     </form>
